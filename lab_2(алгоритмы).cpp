@@ -12,7 +12,7 @@ const int n = 2500;
 const int alpha = 2;
 const int threads = 16;
 
-/*void scalar(double x[], double y[]) // Скалярное произведение
+void scalar(double x[], double y[]) // Скалярное произведение
 {
    clock_t startTime = clock();
    double sum = 0, resultTime = 0;
@@ -37,7 +37,7 @@ void enter_vector()
    scalar(x, y);
    if ( x ) { delete[] x; x = NULL; }
    if ( y ) { delete[] y; y = NULL; }
-}*/
+}
 
 void multiplication_matrix(double x[], double y[]) // Произведение матриц
 {
@@ -84,7 +84,7 @@ void enter_matrix()
    if ( y ) { delete[] x; x = NULL; }
 }
 
-/*void CalcY(double U[], double x[], double b[])
+void CalcY(double U[], double x[], double b[])
 {
    FILE *file = NULL;
 
@@ -181,22 +181,22 @@ void enter_vector_dop()
    combine_vectors(x, y);
    if ( x ) { delete[] x; x = NULL; }
    if ( y ) { delete[] y; y = NULL; }
-}*/
+}
 
 
 int main()
 {
    setlocale(0, "Russian");
 
-   //printf_s("----- ЗАДАНИЕ 1 -----\n");
-   //enter_vector(); // Задание 1
+   printf_s("----- ЗАДАНИЕ 1 -----\n");
+   enter_vector(); // Задание 1
 
    printf_s("----- ЗАДАНИЕ 2 -----\n");
    enter_matrix(); // Задание 2
 
    printf_s("----- ЗАДАНИЕ 3 -----\n");
-   //enter_matrix_U_and_vector_x(); // Задание 3
+   enter_matrix_U_and_vector_x(); // Задание 3
 
    printf_s("----- ДОП. ЗАДАНИЕ -----\n");
-  // enter_vector_dop(); // Доп.задание
+  enter_vector_dop(); // Доп.задание
 }
